@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="row add_todo">
+    <span class="task_id">0</span>
+        <div class="col-lg-4 col-md-4"></div>
+        <div class="col-lg-4 col-md-4 todo">
+            <div class="col-md-2" id="plus"><span class="glyphicon glyphicon-plus"></span></div>
+            <div class="col-md-10" id="text"><a class="btn btn-lg btn-success" href="#"
+                                                data-toggle="modal" data-target="#basicModal">Add TODO List</a></div>
+        </div>
+        <div class="col-lg-4 col-md-4"></div>
+    </div>
+{% endblock content %}

@@ -1,0 +1,196 @@
+.container {
+    width: 650px;
+
+}
+.task_id {
+    visibility: hidden;
+}
+.icon {
+    font-size: 32px;
+    padding: 10px;
+    margin-top: 5px;
+    opacity: 0.5;
+}
+
+.task {
+    background: #2b669a;
+    margin-top: 80px;
+    box-shadow: 0 0 2px;
+}
+
+.edit {
+    font-size: 22px;
+    color: white;
+    padding: 10px;
+    margin-top: 10px;
+}
+.trash{
+    font-size: 22px;
+    color: white;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.task .edit  span {
+    visibility: hidden;
+}
+.task:hover .edit {
+    border-right: solid 1px;
+    opacity: 0.5;
+}
+
+.task:hover .edit span {
+    visibility: visible;
+    opacity: 0.5;
+    cursor: pointer;
+
+}
+.task .trash span {
+    visibility: hidden;
+    cursor: pointer;
+}
+.task:hover .trash span {
+    visibility: visible;
+    opacity: 0.5;
+}
+.add_task {
+    background: #a9a9a9;
+    box-shadow: 0 0 2px;
+}
+.plus {
+    font-size: 32px;
+    color: #008000;
+    margin-top: 5px;
+}
+.in_text {
+    margin-top: 6px;
+    padding-right: 0;
+    padding-left: 3px;
+}
+.task_add {
+    color: white;
+    font-size: 14px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin-top: 6px;
+    padding-right: 6px;
+    padding-left: 10px;
+    padding-top: 4px;
+    background: green;
+    height: 34px;
+    width: 95px;
+    border-top: 1px solid darkgrey;
+    border-bottom: 1px solid darkgrey;
+    border-right: solid 1px darkgrey;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+    cursor: pointer;
+}
+.text {
+    color: black;
+    font-size: 24px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    padding-top: 18px;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px white;
+
+}
+.add_todo {
+    margin-top: 80px;
+}
+.todo {
+    background: #2b669a;
+    border: double 1px #2b669a;
+    border-radius: 4px;
+}
+#plus {
+    font-size: 28px;
+    opacity: 0.8;
+    text-shadow: 1px 1px 1px #e5e5ee;
+    padding: 7px;
+}
+#text {
+    font-size: 16px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    color: white;
+    margin-top: 12px;
+    text-align: center;
+    text-shadow: 1px 1px 1px #222222;
+}
+
+.task_info_1 {
+    border-bottom: solid silver 1px;
+    border-left: solid silver 1px;
+    border-right: double silver 4px;
+    height: inherit;
+    padding-top: 10px;
+}
+
+.task_info_3 {
+    border-right: solid silver 1px;
+    border-bottom: solid silver 1px;
+    height: inherit;
+
+}
+.task_info_3 div.task_info_position, div.task_info_edit, div.task_info_trash {
+    float: left;
+
+}
+.task_info_2 {
+    border-bottom: solid silver 1px;
+    height: inherit;
+    border-right: solid silver 1px;
+
+}
+.task_info {
+    display: flex;
+    background: snow;
+    height: auto;
+}
+.task_info:hover .up {
+    border-bottom: solid silver 1px;
+}
+.task_info:hover .task_info_edit {
+    border-right: solid silver 1px;
+    border-left: solid #c0c0c0 1px;
+}
+.task_info_edit {
+    margin-top: 10px;
+    margin-left: 10px;
+    padding-right: 7px;
+    padding-left: 8px;
+
+}
+.task_info_trash {
+    margin-top: 10px;
+    margin-left: 5px;
+}
+.task_info .up span, .down span, .task_info_edit span, .task_info_trash span {
+    visibility: hidden;
+}
+
+.task_info:hover .up span {
+    visibility: visible;
+    opacity: 0.5;
+    cursor: pointer;
+}
+.task_info:hover  .down span  {
+    visibility: visible;
+    opacity: 0.5;
+    cursor: pointer;
+}
+.task_info:hover .task_info_edit span {
+    visibility: visible;
+    opacity: 0.5;
+    cursor: pointer;
+}
+.task_info:hover .task_info_trash span {
+    visibility: visible;
+    opacity: 0.5;
+    cursor: pointer;
+}
+.btn-lg {
+    padding-left: 8px;
+    margin-bottom: 10px;
+    padding-top: 5px;
+}

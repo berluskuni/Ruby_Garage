@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% block content %}
+
+    {% for sched in scheduler %}
+        <div class="{{ sched.task_id }}">
+    <div class="row task">
+        <div class="col-lg-1 col-md-2 icon" ><span class="glyphicon glyphicon-calendar"></span>
+        </div>
+        <div class="col-lg-9 col-md-6 text" id="task{{ sched.task_id }}">{{ sched.title }}</div>
+        <div class="col-lg-1 col-md-2 edit" name="{{ sched.task_id }}"><span class="glyphicon glyphicon-pencil"></span></div>
+        <div class="col-lg-1 col-md-2 trash" name ="{{ sched.task_id }}"><span class="glyphicon glyphicon-trash"></span></div>
+    </div>
+    <div class="row add_task">
+        <div class="col-lg-1 col-md-2 plus"><span class="glyphicon glyphicon-plus"></span></div>
+        <div class="col-lg-9 col-md-7 in_text" id="{{ sched.task_id }}">
+            <input required type="text" id="in_text_{{ sched.task_id }}" class="form-control" placeholder="Start typing here to create a task" >
+        </div>
+        <div class="col-lg-2 col-md-3 task_add" name ="{{ sched.task_id }}">Add Task</div>
+    </div>
+            {% for list in list_task %}
+                {% if sched.task_id == list.task_id %}
+        <div class="row task_info" name ="{{ sched.task_id }}" id="info_id_{{ sched.task_id }}_count_{{ list.count }}">
+        <div class="col-lg-1 col-md-2 task_info_1 task_done" name="{{ list.count }}" id="task_done_{{ list.count }}">
+            <label>
+                <input type="checkbox" {% if list.condition %} checked {% endif %} value="{{ list.count }}">
+            </label>
+        </div>
+        <div class="col-lg-9 col-md-7 task_info_2" id="{{ sched.task_id }}_{{ list.count }}">{{ list.task }}</div>
+        <div class="col-lg-2 col-md-3 task_info_3" >
+            <div class="task_info_position">
+                <div  class="up"><span class="glyphicon glyphicon-arrow-up"></span></div>
+                <div  class="down"><span class="glyphicon glyphicon-arrow-down"></span></div>
+            </div>
+            <div  class="task_info_edit" name="{{ list.count }}"><span class="glyphicon glyphicon-pencil"></span></div>
+            <div  class="task_info_trash" name="{{ list.count }}"><span class="glyphicon glyphicon-trash"></span></div>
+        </div>
+        </div>
+                {% endif %}
+                {% endfor %}
+    </div>
+      {% endfor %}
+    <div class="row add_todo">
+        <span class="task_id">{{ task_id }}</span>
+        <div class="col-lg-4 col-md-4"></div>
+        <div class="col-lg-4 col-md-4 todo">
+            <div class="col-md-2" id="plus"><span class="glyphicon glyphicon-plus"></span></div>
+            <div class="col-md-10" id="text"><a class="btn btn-lg btn-success" href="#"
+                                                data-toggle="modal" data-target="#basicModal">Add TODO List</a></div>
+        </div>
+        <div class="col-lg-4 col-md-4"></div>
+    </div>
+{% endblock content %}
