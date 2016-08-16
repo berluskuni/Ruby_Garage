@@ -1,0 +1,13 @@
+Django==1.7.11
+django-crispy-forms==1.6.0
+django-registration-redux==1.2
+MySQL-python==1.2.5
+oauthlib==1.1.2
+Pillow==3.3.0
+PyJWT==1.4.0
+python-dateutil==2.5.3
+python-openid==2.2.5
+python-social-auth==0.2.12
+requests==2.10.0
+requests-oauthlib==0.6.1
+six==1.10.0
